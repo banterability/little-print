@@ -15,11 +15,15 @@ class LittlePrint {
     this._makeRequest(data, "html");
   }
 
+  status() {
+    this._makeRequest(null, null, "GET")
+  }
+
   text(data) {
     this._makeRequest(data, "text");
   }
 
-  _makeRequest(data, type) {
+  _makeRequest(data, type, method="POST") {
     const payload = { [type]: data };
 
     const body = JSON.stringify(payload);
@@ -30,7 +34,7 @@ class LittlePrint {
       hostname: "device.li",
       port: 443,
       path: `/${this.deviceKey}?from=${encodeURIComponent(this.appName)}`,
-      method: "POST",
+      method: method,
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
