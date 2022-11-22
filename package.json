@@ -17,11 +17,14 @@
     "sirius",
     "device key"
   ],
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "bugs": {
     "url": "https://github.com/banterability/little-print/issues"
   },
   "homepage": "https://github.com/banterability/little-print#readme",
   "devDependencies": {
-    "prettier": "^2.0.4"
+    "prettier": "^2.7.1"
   }
 }
