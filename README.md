@@ -1,5 +1,7 @@
 # little-print
 
+[![Latest Version](https://img.shields.io/npm/v/little-print.svg)](https://www.npmjs.com/package/little-print)
+
 A dependency-free wrapper for [Nord Projects' Device Keys API for Little Printer](https://littleprinter.nordprojects.co/).
 
 ## Usage
