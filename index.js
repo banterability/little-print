@@ -3,7 +3,7 @@ const VERSION = require("./package.json").version;
 
 class LittlePrint {
   constructor({ appName, deviceKey }) {
-    this.appName = appName || "LittlePrint";
+    this.appName = appName || "little-print";
 
     if (!deviceKey) throw new Error("deviceKey required");
     this.deviceKey = deviceKey;
