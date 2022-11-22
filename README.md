@@ -1,6 +1,6 @@
 # little-print
 
-A dependency-free wrapper for Nord Projects' Device Keys API for Little Printer.
+A dependency-free wrapper for [Nord Projects' Device Keys API for Little Printer](https://littleprinter.nordprojects.co/).
 
 ## Usage
 
