@@ -19,10 +19,7 @@ class LittlePrint {
 
   _makeRequest(data, type) {
     const payload = { [type]: data };
-
     const body = JSON.stringify(payload);
-
-    console.log(body);
 
     const options = {
       hostname: "device.li",
