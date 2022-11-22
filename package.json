@@ -18,16 +18,16 @@
     "device key"
   ],
   "scripts": {
-    "format": "prettier --write .",
-    "test": "jest"
+    "format": "prettier --write ."
   },
   "bugs": {
     "url": "https://github.com/banterability/little-print/issues"
   },
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "homepage": "https://github.com/banterability/little-print#readme",
   "devDependencies": {
-    "jest": "^29.3.1",
     "prettier": "^2.7.1"
   }
 }
