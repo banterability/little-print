@@ -45,11 +45,13 @@ printer.printHTML(`
 Prints a GIF, JPEG, or PNG image.
 
 #### Input
+
 ```javascript
-printer.printImage('./first_time.jpg');
+printer.printImage("./first_time.jpg");
 ```
 
 #### Output
+
 ![output of `printImage` example](https://github.com/banterability/little-print/blob/main/docs/printImage-output.png?raw=true)
 
 ### `printText(text: String)`
