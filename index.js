@@ -64,15 +64,18 @@ export default class LittlePrint {
   }
 
   _makeRequest(body, contentType) {
+    const query = new URLSearchParams();
+    query.set("from", this.appName);
+
     const options = {
       hostname: "device.li",
       port: 443,
-      path: `/${this.deviceKey}?from=${encodeURIComponent(this.appName)}`,
+      path: `/${this.deviceKey}?${query.toString()}`,
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": contentType,
         "Content-Length": body.length,
+        "Content-Type": contentType,
         "User-Agent": `little-print/v${VERSION}`,
       },
     };
