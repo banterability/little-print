@@ -19,8 +19,8 @@
     "device key"
   ],
   "scripts": {
-    "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier": "prettier --write ."
   },
   "bugs": {
     "url": "https://github.com/banterability/little-print/issues"
