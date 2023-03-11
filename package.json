@@ -2,7 +2,7 @@
   "name": "little-print",
   "description": "A wrapper for Nord Projects' Device Keys API for Little Printer",
   "author": "Jeff Long <hello@banterability.com>",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "repository": {

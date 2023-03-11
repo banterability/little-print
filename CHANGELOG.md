@@ -1,3 +1,7 @@
+## 2.0.0
+
+- Print images (gif, jpeg, png)
+
 ## 1.0.2
 
 - Thinner NPM package
