@@ -9,6 +9,8 @@ A dependency-free wrapper for [Nord Projects' Device Keys API for Little Printer
 Instantiate a `LittlePrint` class:
 
 ```javascript
+import LittlePrint from "little-print";
+
 const printer = new LittlePrint({
   deviceKey: "abcd1234", // required
   appName: "README", // optional
