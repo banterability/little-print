@@ -38,7 +38,7 @@ printer.printHTML(`
 
 #### Output
 
-![output of `printHTML` example](https://github.com/banterability/little-print/blob/master/docs/printHTML-output.png?raw=true)
+![output of `printHTML` example](https://github.com/banterability/little-print/blob/main/docs/printHTML-output.png?raw=true)
 
 ### `printText(text: String)`
 
@@ -54,4 +54,4 @@ printer.printText(
 
 #### Output
 
-![output of `printText` example](https://github.com/banterability/little-print/blob/master/docs/printText-output.png?raw=true)
+![output of `printText` example](https://github.com/banterability/little-print/blob/main/docs/printText-output.png?raw=true)
