@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
-import https from "node:https";
 import { getMimeType } from "./lib/mimeType.js";
+import { makeRequest } from "./lib/request.js";
 
 const VERSION = "2.0.0";
 
@@ -12,31 +12,31 @@ export default class LittlePrint {
     this.deviceKey = deviceKey;
   }
 
-  printHTML(data) {
-    this._jsonRequest(data, "html");
+  async printHTML(data) {
+    return await this._jsonRequest(data, "html");
   }
 
-  printText(data) {
-    this._jsonRequest(data, "text");
+  async printText(data) {
+    return await this._jsonRequest(data, "text");
   }
 
-  printImage(path) {
-    this._imageRequest(path);
+  async printImage(path) {
+    return await this._imageRequest(path);
   }
 
-  _imageRequest(path) {
+  async _imageRequest(path) {
     const mimetype = getMimeType(path);
     const imageData = readFileSync(path);
-    this._makeRequest(imageData, mimetype);
+    return await this._makeRequest(imageData, mimetype);
   }
 
-  _jsonRequest(data, type) {
+  async _jsonRequest(data, type) {
     const payload = { [type]: data };
     const body = JSON.stringify(payload);
-    this._makeRequest(body, "application/json");
+    return await this._makeRequest(body, "application/json");
   }
 
-  _makeRequest(body, contentType) {
+  async _makeRequest(data, contentType) {
     const query = new URLSearchParams();
     query.set("from", this.appName);
 
@@ -47,23 +47,12 @@ export default class LittlePrint {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Length": body.length,
+        "Content-Length": data.length,
         "Content-Type": contentType,
         "User-Agent": `little-print/v${VERSION}`,
       },
     };
 
-    const req = https.request(options, (res) => {
-      res.on("data", (d) => {
-        process.stdout.write(d);
-      });
-    });
-
-    req.on("error", (error) => {
-      console.error(error);
-    });
-
-    req.write(body);
-    req.end();
+    return await makeRequest(options, data);
   }
 }

@@ -26,7 +26,7 @@ Prints a provided HTML document.
 #### Input
 
 ```javascript
-printer.printHTML(`
+await printer.printHTML(`
   <em>*slaps roof of printer*</em>
   <h1>You can fit</h1>
   <ul>
@@ -36,6 +36,7 @@ printer.printHTML(`
   </ul>
   <h2>in this bad boy!</h2>
 `);
+// returns {statusCode, headers, body}, if you care
 ```
 
 #### Output
@@ -49,7 +50,8 @@ Prints a GIF, JPEG, or PNG image.
 #### Input
 
 ```javascript
-printer.printImage("./first_time.jpg");
+await printer.printImage("./first_time.jpg");
+// returns {statusCode, headers, body}
 ```
 
 #### Output
@@ -63,9 +65,10 @@ Prints a provided string.
 #### Input
 
 ```javascript
-printer.printText(
+await printer.printText(
   `The story begins in any of the three dozen taquerias supplying the Bay Area Feeder Network, an expansive spiderweb of tubes running through San Francisco's Mission district as far south as the "Burrito Bordeaux" region of Palo Alto and Mountain View.`
 );
+// returns {statusCode, headers, body}
 ```
 
 #### Output
