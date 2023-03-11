@@ -50,7 +50,7 @@ printer.printImage('./first_time.jpg');
 ```
 
 #### Output
-![output of `printImage` example](https://github.com/banterability/little-print/blob/main/docs/printText-output.png?raw=true)
+![output of `printImage` example](https://github.com/banterability/little-print/blob/main/docs/printImage-output.png?raw=true)
 
 ### `printText(text: String)`
 
