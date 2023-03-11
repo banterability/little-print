@@ -1,4 +1,6 @@
-const https = require("https");
+const { readFileSync } = require("node:fs");
+const https = require("node:https");
+const { getMimeType } = require("./lib/mimetypes");
 const VERSION = require("./package.json").version;
 
 class LittlePrint {
@@ -10,17 +12,30 @@ class LittlePrint {
   }
 
   printHTML(data) {
-    this._makeRequest(data, "html");
+    this._jsonRequest(data, "html");
   }
 
   printText(data) {
-    this._makeRequest(data, "text");
+    this._jsonRequest(data, "text");
   }
 
-  _makeRequest(data, type) {
+  printImage(path) {
+    this._imageRequest(path);
+  }
+
+  _imageRequest(path) {
+    const mimetype = getMimeType(path);
+    const imageData = readFileSync(path);
+    this._makeRequest(imageData, mimetype);
+  }
+
+  _jsonRequest(data, type) {
     const payload = { [type]: data };
     const body = JSON.stringify(payload);
+    this._makeRequest(body, "application/json");
+  }
 
+  _makeRequest(body, contentType) {
     const options = {
       hostname: "device.li",
       port: 443,
@@ -28,7 +43,7 @@ class LittlePrint {
       method: "POST",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json; charset=utf-8",
+        "Content-Type": contentType,
         "Content-Length": body.length,
         "User-Agent": `little-print/v${VERSION}`,
       },

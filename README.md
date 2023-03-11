@@ -40,6 +40,18 @@ printer.printHTML(`
 
 ![output of `printHTML` example](https://github.com/banterability/little-print/blob/main/docs/printHTML-output.png?raw=true)
 
+### `printImage(path: Path)`
+
+Prints a GIF, JPEG, or PNG image.
+
+#### Input
+```javascript
+printer.printImage('./first_time.jpg');
+```
+
+#### Output
+![output of `printImage` example](https://github.com/banterability/little-print/blob/main/docs/printText-output.png?raw=true)
+
 ### `printText(text: String)`
 
 Prints a provided string.
