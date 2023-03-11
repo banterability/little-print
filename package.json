@@ -16,6 +16,7 @@
     "berg",
     "nord projects",
     "sirius",
+    "nord-sirius",
     "device key"
   ],
   "scripts": {
@@ -26,7 +27,8 @@
     "url": "https://github.com/banterability/little-print/issues"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "lib/"
   ],
   "homepage": "https://github.com/banterability/little-print#readme",
   "devDependencies": {

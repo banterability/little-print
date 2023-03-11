@@ -1,6 +1,8 @@
 ## 2.0.0
 
-- Print images (gif, jpeg, png)
+- ES Modules
+- All print methods now return a promise
+- Adds support for printing images (gif, jpeg, png)
 
 ## 1.0.2
 
