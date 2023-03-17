@@ -1,19 +1,23 @@
 import { extname } from "node:path";
 
-const MIME_TYPES = Object.freeze({
+interface StringMap {
+  [key: string]: string;
+}
+
+const MIME_TYPES: StringMap = Object.freeze({
   png: "image/png",
   gif: "image/gif",
   jpg: "image/jpeg",
 });
 
-const EXTENTIONS = Object.freeze({
+const EXTENTIONS: StringMap = Object.freeze({
   ".gif": MIME_TYPES["gif"],
   ".jpg": MIME_TYPES["jpg"],
   ".jpeg": MIME_TYPES["jpg"],
   ".png": MIME_TYPES["png"],
 });
 
-export function getMimeType(path) {
+export function getMimeType(path: string) {
   const extention = extname(path);
   const mimeType = EXTENTIONS[extention];
 
