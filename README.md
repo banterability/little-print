@@ -66,7 +66,7 @@ Prints a provided string.
 
 ```javascript
 await printer.printText(
-  `The story begins in any of the three dozen taquerias supplying the Bay Area Feeder Network, an expansive spiderweb of tubes running through San Francisco's Mission district as far south as the "Burrito Bordeaux" region of Palo Alto and Mountain View.`
+  `The story begins in any of the three dozen taquerias supplying the Bay Area Feeder Network, an expansive spiderweb of tubes running through San Francisco's Mission district as far south as the "Burrito Bordeaux" region of Palo Alto and Mountain View.`,
 );
 // returns {statusCode, headers, body}
 ```

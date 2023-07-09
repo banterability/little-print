@@ -1,6 +1,7 @@
 ## 2.0.1
 
 - Typescript migration
+
 ## 2.0.0
 
 - ES Modules
