@@ -16,5 +16,5 @@ module.exports = {
     sourceType: "module",
     project: true,
   },
-  root: true
+  root: true,
 };
