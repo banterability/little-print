@@ -14,7 +14,6 @@ export async function makeRequest(
           console.log("good response", res.statusCode, res.headers, body);
           resolve({
             statusCode: res.statusCode,
-
             headers: res.headers,
             body: body,
           });
