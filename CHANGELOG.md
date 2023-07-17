@@ -1,3 +1,8 @@
+## 2.0.2
+
+- Improved types
+- Dependency updates
+
 ## 2.0.1
 
 - Typescript migration
