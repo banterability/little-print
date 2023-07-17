@@ -1,8 +1,6 @@
 import { extname } from "node:path";
 
-interface StringMap {
-  [key: string]: string;
-}
+type StringMap = Record<string, string>;
 
 const MIME_TYPES: StringMap = Object.freeze({
   png: "image/png",
@@ -11,10 +9,10 @@ const MIME_TYPES: StringMap = Object.freeze({
 });
 
 const EXTENTIONS: StringMap = Object.freeze({
-  ".gif": MIME_TYPES["gif"],
-  ".jpg": MIME_TYPES["jpg"],
-  ".jpeg": MIME_TYPES["jpg"],
-  ".png": MIME_TYPES["png"],
+  ".gif": MIME_TYPES.gif,
+  ".jpg": MIME_TYPES.jpg,
+  ".jpeg": MIME_TYPES.jpg,
+  ".png": MIME_TYPES.png,
 });
 
 export function getMimeType(path: string) {

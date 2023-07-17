@@ -9,7 +9,7 @@ export default class LittlePrint {
   deviceKey: string;
 
   constructor({ appName, deviceKey }: { appName?: string; deviceKey: string }) {
-    this.appName = appName || "little-print";
+    this.appName = appName ?? "little-print";
 
     if (!deviceKey) throw new Error("deviceKey required");
     this.deviceKey = deviceKey;

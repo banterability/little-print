@@ -7,7 +7,7 @@ export async function makeRequest(
   return new Promise((resolve, reject) => {
     const req = request(options, (res) => {
       let body = "";
-      res.on("data", (chunk) => (body += chunk.toString()));
+      res.on("data", (chunk: Buffer) => (body += chunk.toString()));
       res.on("error", reject);
       res.on("end", () => {
         if (res.statusCode && res.statusCode >= 200 && res.statusCode <= 299) {
