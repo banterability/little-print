@@ -11,3 +11,5 @@ updates:
       typescript-eslint:
         patterns:
           - "@typescript-eslint*"
+    cooldown:
+      default-days: 3
