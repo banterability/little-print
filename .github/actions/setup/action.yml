@@ -1,4 +1,4 @@
-name: Setup
+name: 🏗️ Setup
 description: Check out repo, set up Node.js, and install dependencies
 
 runs:
