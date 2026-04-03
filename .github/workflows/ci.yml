@@ -1,0 +1,93 @@
+name: 🚦 PR Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  eslint:
+    name: 🔬 ESLint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: ESLint
+        run: npm run lint
+
+  prettier:
+    name: 💅 Prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Prettier
+        run: npm run check
+
+  typecheck:
+    name: 👾 TypeScript
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: TypeScript
+        run: npm run typecheck
+
+#   vitest:
+#     name: 🧪 Vitest
+#     runs-on: ubuntu-latest
+#
+#     steps:
+#       - name: Check out Git repository
+#         uses: actions/checkout@v6
+#
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v6
+#         with:
+#           cache: npm
+#           cache-dependency-path: ./package.json
+#
+#       - name: Install dependencies
+#         run: npm install
+#
+#       - name: Vitest
+#         run: npm test
+#
