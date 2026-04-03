@@ -18,9 +18,10 @@
   },
   "scripts": {
     "build": "tsc",
+    "check": "prettier --check .",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc --noEmit"
   },
   "engines": {
     "node": ">=16"
