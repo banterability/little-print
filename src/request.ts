@@ -19,7 +19,7 @@ export async function makeRequest(
           });
         } else {
           console.log("bad response", res.statusCode, res.headers, body);
-          reject(`request failed [${res.statusCode}]`);
+          reject(new Error(`request failed [${res.statusCode}]`));
         }
       });
     });
