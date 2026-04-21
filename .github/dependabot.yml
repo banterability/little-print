@@ -9,9 +9,11 @@ updates:
     commit-message:
       prefix: "🤖 "
     groups:
-      typescript-eslint:
+      eslint:
         patterns:
-          - "@typescript-eslint*"
+          - "@eslint/*"
+          - "eslint*"
+          - "*-eslint"
     cooldown:
       default-days: 3
   - package-ecosystem: github-actions
