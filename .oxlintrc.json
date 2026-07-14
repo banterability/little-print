@@ -1,15 +1,9 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "eslint",
-    "import",
-    "oxc",
-    "typescript",
-    "unicorn",
-  ],
+  "plugins": ["eslint", "import", "oxc", "typescript", "unicorn"],
   "categories": {
     "correctness": "error",
-    "perf": "warn",
+    "perf": "warn"
   },
   "ignorePatterns": ["dist/**"]
 }

@@ -1,9 +1,6 @@
 import { request, RequestOptions } from "node:https";
 
-export async function makeRequest(
-  options: RequestOptions,
-  data: string | Buffer | Uint8Array,
-) {
+export async function makeRequest(options: RequestOptions, data: string | Buffer | Uint8Array) {
   return new Promise((resolve, reject) => {
     const req = request(options, (res) => {
       let body = "";

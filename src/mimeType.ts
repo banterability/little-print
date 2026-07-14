@@ -21,9 +21,7 @@ export function getMimeType(path: string) {
 
   if (!mimeType) {
     throw new Error(
-      `Unsupported file type. Expected one of [${Object.values(MIME_TYPES).join(
-        ", ",
-      )}]`,
+      `Unsupported file type. Expected one of [${Object.values(MIME_TYPES).join(", ")}]`,
     );
   }
   return mimeType;

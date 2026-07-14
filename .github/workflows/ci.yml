@@ -22,13 +22,13 @@ jobs:
         run: npm run lint
 
   prettier:
-    name: 💅 Prettier
+    name: 💅 Oxfmt
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v7.0.0
       - uses: ./.github/actions/setup
-      - name: Prettier
+      - name: Oxfmt
         run: npm run fmt
 
   typecheck:

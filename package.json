@@ -2,48 +2,48 @@
   "name": "little-print",
   "version": "2.0.2",
   "description": "A wrapper for Nord Projects' Device Keys API for Little Printer",
-  "author": "Jeff Long <hello@banterability.com>",
+  "keywords": [
+    "berg",
+    "device key",
+    "little printer",
+    "nord projects",
+    "nord-sirius",
+    "sirius",
+    "thermal printer"
+  ],
+  "homepage": "https://github.com/banterability/little-print",
+  "bugs": {
+    "url": "https://github.com/banterability/little-print/issues"
+  },
   "license": "MIT",
-  "exports": "./dist/index.js",
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "sideEffects": false,
-  "devDependencies": {
-    "@types/node": "26.1.1",
-    "oxlint": "1.74.0",
-    "prettier": "3.9.5",
-    "typescript": "7.0.2"
-  },
-  "scripts": {
-    "build": "tsc",
-    "fmt": "prettier --check .",
-    "fmt:fix": "prettier --write .",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "typecheck": "tsc --noEmit"
-  },
-  "engines": {
-    "node": ">=16"
-  },
+  "author": "Jeff Long <hello@banterability.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/banterability/little-print.git"
   },
-  "bugs": {
-    "url": "https://github.com/banterability/little-print/issues"
-  },
-  "homepage": "https://github.com/banterability/little-print",
-  "keywords": [
-    "little printer",
-    "thermal printer",
-    "berg",
-    "nord projects",
-    "sirius",
-    "nord-sirius",
-    "device key"
-  ],
   "files": [
     "dist/**/*.js",
     "dist/**/*.d.ts"
-  ]
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.1",
+    "oxfmt": "0.59.0",
+    "oxlint": "1.74.0",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
 }

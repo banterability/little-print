@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+
 import { getMimeType } from "./mimeType.js";
 import { makeRequest } from "./request.js";
 
