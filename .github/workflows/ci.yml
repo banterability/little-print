@@ -12,13 +12,13 @@ concurrency:
 
 jobs:
   eslint:
-    name: 🔬 ESLint
+    name: 🔬 Oxlint
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v7.0.0
       - uses: ./.github/actions/setup
-      - name: ESLint
+      - name: Oxlint
         run: npm run lint
 
   prettier:
@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v7.0.0
       - uses: ./.github/actions/setup
       - name: Prettier
-        run: npm run check
+        run: npm run fmt
 
   typecheck:
     name: 👾 TypeScript
