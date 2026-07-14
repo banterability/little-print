@@ -3,7 +3,10 @@ import { readFileSync } from "node:fs";
 import { getMimeType } from "./mimeType.js";
 import { makeRequest } from "./request.js";
 
-const VERSION = "2.0.0";
+
+export const VERSION: string = JSON.parse(
+  readFileSync(new URL("../package.json", import.meta.url), "utf-8"),
+).version;
 
 export default class LittlePrint {
   appName: string;
