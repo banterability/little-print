@@ -16,8 +16,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "check": "prettier --check .",
-    "format": "prettier --write .",
+    "fmt": "prettier --check .",
+    "fmt:fix": "prettier --write .",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "typecheck": "tsc --noEmit"

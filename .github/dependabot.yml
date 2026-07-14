@@ -8,12 +8,6 @@ updates:
       timezone: "America/Chicago"
     commit-message:
       prefix: "🤖 "
-    groups:
-      eslint:
-        patterns:
-          - "@eslint/*"
-          - "eslint*"
-          - "*-eslint"
     cooldown:
       default-days: 3
   - package-ecosystem: github-actions
