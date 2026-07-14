@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { getMimeType } from "./mimeType.js";
 import { makeRequest } from "./request.js";
 
+export type { PrintResponse } from "./request.js";
 
 export const VERSION: string = JSON.parse(
   readFileSync(new URL("../package.json", import.meta.url), "utf-8"),

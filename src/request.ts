@@ -1,7 +1,17 @@
+import { IncomingHttpHeaders } from "node:http";
 import { request, RequestOptions } from "node:https";
 
-export async function makeRequest(options: RequestOptions, data: string | Buffer | Uint8Array) {
-  return new Promise((resolve, reject) => {
+export interface PrintResponse {
+  statusCode: number;
+  headers: IncomingHttpHeaders;
+  body: string;
+}
+
+export async function makeRequest(
+  options: RequestOptions,
+  data: string | Buffer | Uint8Array,
+): Promise<PrintResponse> {
+  return new Promise<PrintResponse>((resolve, reject) => {
     const req = request(options, (res) => {
       let body = "";
       res.on("data", (chunk: Buffer) => (body += chunk.toString()));
