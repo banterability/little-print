@@ -10,6 +10,11 @@ updates:
       prefix: "🤖 "
     cooldown:
       default-days: 3
+    groups:
+      oxc:
+        patterns:
+          - "oxfmt"
+          - "oxlint"
   - package-ecosystem: github-actions
     directory: /
     schedule:
